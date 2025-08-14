@@ -1,0 +1,11 @@
+pandas
+numpy
+sentence-transformers
+scikit-learn
+openpyxl          # Excel read/write
+xlrd              # Legacy Excel format support (.xls)
+PyPDF2            # PDF parsing
+pdfplumber        # Better PDF text extraction
+tabulate          # Pretty console tables
+nltk              # Optional: sentence splitting
+
