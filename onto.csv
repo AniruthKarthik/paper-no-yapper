@@ -1064,5 +1064,223 @@ Malicious Code Domains,domain,This domain covers various categories of malicious
 Language Domains,domain,Language domains cover malware written in specific languages (like C, C++, Python). Static analysis techniques differ slightly depending on language and compilation targets, affecting how code is disassembled or decompiled.
 Hardware Platform Domain,domain,This domain includes different CPU architectures and device types (e.g., x86, ARM). Static analysis must account for architecture-specific details when disassembling or emulating code.
 Code Emulation Domain,domain,Code emulation domain involves the static use of CPU emulation to analyze code paths. Analysts use static emulators like Unicorn in this domain to symbolically execute code sections without running them on the original hardware.
-
-
+RetDec,tool,An open-source machine-code decompiler that translates binary code into high-level C-like pseudocode for static malware analysis without execution.
+objdump,tool,A GNU Binutils tool that displays information about object files, including disassembly of sections, symbols, and relocations for static binary inspection.
+readelf,tool,A GNU tool that displays detailed information about ELF file headers, sections, and symbols to aid in static analysis of Linux executables.
+otool,tool,An Apple command-line tool for displaying specific parts of Mach-O files, such as headers, symbols, and disassembly on macOS binaries.
+nm,tool,A Unix utility that lists symbols from object files, helping analysts identify exported functions and variables in binaries during static analysis.
+dumpbin,tool,A Microsoft Visual Studio tool that dumps information about PE files, including exports, imports, and sections for Windows binary examination.
+pydasm,tool,A Python library for disassembling x86 code, allowing scripted static analysis of machine code snippets extracted from malware.
+flare-emu,tool,A framework that emulates code paths using Unicorn Engine to explore binary behavior statically without full execution.
+Speakeasy,tool,An emulation framework by Mandiant that simulates binary execution paths for extracting IOCs and behaviors in a static context.
+Unicorn Engine,tool,A CPU emulator framework that can be used for static symbolic execution and code path exploration in malware binaries.
+Keystone Engine,tool,A multi-architecture assembler framework used in static analysis to assemble and test code snippets for understanding malware instructions.
+Z3 Solver,tool,A theorem prover from Microsoft Research used in static analysis for solving constraints in symbolic execution of malware code.
+BinDiff,tool,A binary differencing tool that compares disassembled functions between malware variants to identify code similarities statically.
+Kaitai Struct,tool,A declarative language and tool for parsing binary data structures, enabling custom file format dissection in static malware analysis.
+Hex-Rays Decompiler,tool,A plugin for IDA Pro that decompiles assembly into C-like pseudocode for higher-level static understanding of malware logic.
+Diaphora,tool,An IDA Pro plugin for binary diffing that identifies matching functions and code changes between malware samples.
+Bindead,tool,A static analysis framework that performs abstract interpretation on binaries to detect vulnerabilities and behaviors without execution.
+Manticore,tool,A symbolic execution engine for binaries that explores execution paths statically to find bugs or extract information from malware.
+Triton,tool,A dynamic binary analysis framework with symbolic execution capabilities for concolic testing in a static malware context.
+BAP (Binary Analysis Platform),tool,A framework for binary code analysis that lifts machine code to an intermediate language for static reasoning.
+Ghidra P-Code,tool,Ghidra's intermediate representation language used for static decompilation and analysis of lifted binary code.
+Rekall,tool,A memory forensics framework that can parse static memory dumps for malware artifacts without live system access.
+Foremost,tool,A file carving tool that recovers files from disk images or raw data based on headers and footers in static forensic analysis.
+Scalpel,tool,An advanced file carver that extracts embedded files from binary blobs using custom signatures for static malware extraction.
+Pyew,tool,A Python tool for static malware analysis that provides disassembly, code graphing, and pattern searching in binaries.
+Viper Framework,tool,An open-source binary analysis and management framework for organizing and statically analyzing malware samples.
+REMnux,tool,A Linux distribution packed with static and dynamic malware analysis tools, focused on reverse engineering binaries.
+Androguard,tool,A Python library for static analysis of Android APKs, including decompilation and signature-based scanning.
+Quark-Engine,tool,An Android malware scoring system that uses static rule-based analysis to detect malicious behaviors in APKs.
+MobSF (Mobile Security Framework),tool,An automated static and dynamic analysis framework for mobile apps, with strong static capabilities for APK inspection.
+Baksmali,tool,A disassembler for Android's Dalvik bytecode that converts DEX files into smali assembly for static code review.
+Smali,tool,An assembler/disassembler for Android's smali format, allowing static modification and analysis of Dalvik code.
+LIEF (Library to Instrument Executable Formats),tool,A cross-platform library to parse, modify, and abstract PE, ELF, and Mach-O formats for static binary manipulation.
+Packerid,tool,A tool that identifies known packers in executables by signature matching for guiding static unpacking processes.
+Manul,tool,A coverage-guided fuzzer that can be used in static modes to analyze binary structures before dynamic testing.
+Rizin,tool,A fork of Radare2 providing reverse engineering capabilities with disassembly and scripting for static malware analysis.
+Plasma,tool,An interactive disassembler with a focus on malware analysis, offering visualization and annotation features.
+Medusa,tool,A disassembler and debugger that supports multiple architectures for static code exploration.
+Vivisect,tool,A Python-based binary analysis framework for static emulation and vulnerability discovery in executables.
+Ponce,tool,An IDA Pro plugin for symbolic execution that taints and solves paths statically within the disassembler.
+Sark,tool,An IDA Pro plugin for scripting and automating static analysis tasks like renaming and commenting code.
+Findcrypt,tool,An IDA Pro plugin that locates cryptographic constants and tables in binaries for static crypto analysis.
+IDAPython,tool,Python scripting interface for IDA Pro to automate static analysis workflows on disassembled code.
+Ghidra Scripts,tool,Custom scripts in Java or Python for Ghidra to extend static analysis functionalities like auto-annotation.
+Ropper,tool,A tool to find ROP gadgets in binaries for static exploit analysis and chain construction.
+ROPGadget,tool,A Python tool that searches for gadgets in binaries to build ROP chains during static vulnerability assessment.
+Angr Symbolic Execution,technique,Using symbolic execution engines like Angr to explore code paths with symbolic inputs for static malware behavior prediction.
+Abstract Interpretation,technique,A static analysis method that approximates program semantics to prove properties or detect errors without execution.
+Data Dependency Analysis,technique,Tracking how data flows and depends between instructions in disassembled code to understand malware propagation statically.
+Interprocedural Analysis,technique,Analyzing function calls across boundaries to build complete call graphs and understand global malware behavior.
+Points-To Analysis,technique,Statically determining which memory locations pointers may reference in malware code to resolve indirect accesses.
+Alias Analysis,technique,Identifying when different names refer to the same memory location in binaries for precise static reasoning.
+Shape Analysis,technique,Abstracting heap structures in malware to detect patterns like linked lists or trees used in data handling.
+Numerical Abstract Domain,technique,Using mathematical abstractions to track numerical values and ranges in malware computations statically.
+Interval Analysis,technique,Tracking possible value intervals for variables in disassembled code to detect overflows or invalid states.
+Polyhedral Analysis,technique,Using convex polyhedra to represent and analyze loop invariants in malware for optimization detection.
+Widening and Narrowing,technique,Acceleration techniques in abstract interpretation to handle loops in static malware analysis.
+Fixed Point Computation,technique,Iteratively computing stable states in abstract interpretations for whole-program static analysis.
+Modular Analysis,technique,Analyzing malware components separately and composing results for scalable static examination.
+Context-Sensitive Analysis,technique,Considering calling contexts in function analysis to improve precision in malware call resolution.
+Flow-Sensitive Analysis,technique,Tracking program state changes along execution paths in disassembled malware code.
+Path-Sensitive Analysis,technique,Distinguishing different execution paths in static analysis to avoid false positives in malware detection.
+Sparse Analysis,technique,Efficient static analysis techniques that propagate information only where changes occur in code.
+Demand-Driven Analysis,technique,Lazy static analysis that computes information only when requested for specific malware queries.
+Bottom-Up Analysis,technique,Starting from leaves in the call graph and propagating summaries upward for modular malware analysis.
+Top-Down Analysis,technique,Propagating context from callers to callees in static interprocedural malware analysis.
+Summary-Based Analysis,technique,Computing function summaries to reuse in different contexts during whole-program analysis.
+Clone Detection,technique,Identifying duplicated code blocks in malware binaries to detect copy-paste variants statically.
+Normalization,technique,Canonicalizing disassembled code to compare structurally similar but syntactically different malware.
+Tokenization,technique,Breaking disassembled instructions into tokens for sequence-based malware similarity analysis.
+N-Gram Modeling,technique,Using overlapping instruction sequences as features for static malware classification.
+Opcode Frequency Analysis,technique,Counting instruction types in binaries to create profiles for malware family identification.
+Byte Histogram,technique,Computing frequency distributions of byte values in files for static anomaly detection.
+API Sequence Analysis,technique,Examining ordered API imports or calls in disassembled code to infer malware behavior patterns.
+Control Flow Flattening Detection,technique,Identifying obfuscation that merges multiple paths into one to complicate static analysis.
+Opaque Predicate Analysis,technique,Detecting always-true/false conditions used in malware to mislead static analyzers.
+Junk Code Removal,technique,Statically eliminating nop-like instructions inserted to obfuscate malware disassembly.
+Code Alignment Analysis,technique,Examining instruction alignment patterns that may indicate anti-disassembly tricks in malware.
+Virtualization Obfuscation,technique,Detecting code that emulates a virtual machine to hide malware logic statically.
+Instruction Overlapping,technique,Identifying overlapping code sequences used in malware to evade linear disassembly.
+Entry Point Obfuscation,technique,Finding techniques that hide the true starting point of malware execution in binaries.
+Import Address Table Hooking,technique,Statically detecting modifications to IAT for API interception in malware samples.
+Export Address Table Analysis,technique,Examining EAT in DLLs to understand exposed functions in modular malware.
+Relocation Table Parsing,technique,Analyzing relocations to understand how malware handles dynamic loading statically.
+Overlay Data Analysis,technique,Inspecting appended data in PE files that may contain encrypted payloads or configurations.
+Rich Header Analysis,technique,Examining the undocumented Rich header in PE files for compiler fingerprints or anomalies.
+Timestamp Analysis,technique,Checking compilation timestamps in file headers for consistency or forgery indicators.
+Checksum Verification,technique,Validating file checksums in headers to detect modifications or corruptions in malware samples.
+Section Hashing,technique,Computing hashes of individual binary sections for similarity comparison across samples.
+Anomaly-Based Detection,technique,Using statistical models to flag deviations from normal binary structures in malware.
+Rule-Based Scanning,technique,Applying predefined patterns and heuristics to detect malicious traits in disassembled code.
+Signature Evasion Analysis,technique,Studying how malware alters code to avoid matching known static signatures.
+packer Signature Creation,technique,Developing patterns to detect specific packing algorithms in executables statically.
+Crypter Detection,technique,Identifying encryption wrappers around malware payloads through pattern matching.
+Virtual Machine Artifact Detection,technique,Finding code that checks for VM environments in disassembled malware.
+Emulator Detection Analysis,technique,Statically locating instructions that probe for emulation artifacts like timing discrepancies.
+Sandbox Evasion Code,technique,Identifying conditional branches in code that alter behavior if analysis environments are detected.
+Anti-Disassembly Tricks,technique,Detecting malformed instructions or jumps that confuse disassemblers in malware.
+Anti-Decompilation,technique,Finding obfuscations that prevent accurate high-level code reconstruction from binaries.
+String Encryption Analysis,technique,Locating and decoding encrypted strings in malware to reveal hidden IOCs statically.
+Resource Encryption,technique,Detecting and decrypting encrypted embedded resources in executables.
+Configuration Parsing,technique,Extracting and decoding hardcoded configuration data from malware binaries.
+C2 Address Extraction,technique,Statically finding and decoding command-and-control server addresses in code.
+Mutex Name Analysis,technique,Identifying hardcoded mutex names used by malware for infection marking.
+File Path Hardcoding,technique,Finding embedded file paths that indicate persistence or data exfiltration targets.
+Registry Key Extraction,technique,Locating registry paths in strings or code for persistence mechanism analysis.
+Process Name Checking,technique,Detecting code that enumerates or injects into specific process names.
+Network Protocol Dissection,technique,Statically analyzing hardcoded protocol structures for C2 communication.
+Encryption Key Recovery,technique,Finding and extracting cryptographic keys from binary data or code.
+Hash Function Identification,technique,Matching code patterns to known hashing algorithms used in malware.
+Compression Algorithm Detection,technique,Identifying signatures of compression routines like zlib in binaries.
+Encoding Scheme Analysis,technique,Detecting base64 or hex encoding functions in disassembled malware code.
+ARM Architecture,domain,The domain covering ARM processor binaries, requiring architecture-specific disassembly in static analysis.
+MIPS Architecture,domain,Analysis domain for MIPS-based devices like routers, focusing on big-endian disassembly.
+PowerPC Architecture,domain,Static analysis domain for PowerPC binaries found in older macOS or embedded systems.
+RISC-V Architecture,domain,Emerging domain for RISC-V open architecture, involving custom disassembly tools.
+x86-64 Architecture,domain,Extended x86 domain for 64-bit Windows/Linux binaries with larger address spaces.
+IA-32 Architecture,domain,32-bit x86 domain common in legacy malware, with specific instruction set analysis.
+WebAssembly Domain,domain,Domain for analyzing WASM binaries from web malware, requiring wasm-specific decompilers.
+Bytecode Analysis Domain,domain,Broad domain for virtual machine bytecodes like JVM or .NET IL in cross-platform malware.
+Firmware Reverse Engineering,domain,Domain focused on extracting and analyzing device firmware for embedded malware.
+Bootloader Analysis,domain,Examining bootloaders for rootkits or persistent malware in low-level code.
+Kernel Module Domain,domain,Static analysis of driver or module binaries that interact with OS kernels.
+Userland Malware Domain,domain,Domain for application-level malware, contrasting with kernel-mode threats.
+Cross-Platform Malware,domain,Analysis of malware that targets multiple OS, requiring multi-format static tools.
+Fileless Malware Static,domain,Domain for analyzing in-memory code snippets or scripts without persistent files.
+Ransomware Encryption,domain,Static domain focused on identifying encryption loops and ransom notes in code.
+Spyware Data Collection,domain,Domain for spyware that steals data, analyzing exfiltration code statically.
+Adware Injection,domain,Static analysis of ad-injection logic in browser extensions or apps.
+Rootkit Hiding Techniques,domain,Domain examining code that hides processes or files at user level statically.
+Botnet Client Analysis,domain,Static domain for bot code that connects to C2 for DDoS or spam.
+Worm Propagation Code,domain,Analysis of self-replicating code patterns in network-spreading malware.
+Virus File Infection,domain,Static domain for code that appends or prepends to host files.
+Trojan Downloader,domain,Domain for trojans that fetch additional payloads, analyzing download logic.
+Backdoor Listener,domain,Static analysis of code that opens ports or callbacks for remote access.
+Keylogger Hook Analysis,domain,Domain for keyboard hooking code in user-mode spyware.
+Screen Scraper,domain,Static analysis of code that captures screen regions or windows.
+Form Grabber,domain,Domain for malware that intercepts web form data before submission.
+Credential Stealer,domain,Broad domain for code that targets passwords or tokens in memory or files.
+Cryptominer Detection,domain,Static domain identifying mining algorithms like CryptoNight in binaries.
+Clickjacker Analysis,domain,Domain for UI overlay code that tricks users into unwanted clicks.
+Drive-By Download,domain,Static analysis of exploit kits or droppers delivered via web.
+Phishing Kit Examination,domain,Domain for server-side phishing pages, analyzing HTML/JS statically.
+Spam Bot Code,domain,Static analysis of email-sending loops or templates in malware.
+DDoS Tool Analysis,domain,Domain for flood attack code like SYN or UDP in botnet clients.
+Exploit Code Domain,domain,Broad domain for shellcode or ROP chains in vulnerability exploits.
+Vulnerability Static Scan,domain,Domain using static analysis to find bugs like buffer overflows in code.
+Secure Coding Practices,domain,Domain contrasting malware traits with secure patterns for anomaly detection.
+Compiler Artifact Domain,domain,Analysis of leftovers from compilers like debug info or optimizations.
+Linker Fingerprinting,domain,Identifying linker versions or options from binary metadata.
+Runtime Library Detection,domain,Static domain for spotting statically linked libs like libc or msvcrt.
+Dynamic Linking Analysis,domain,Examining dependencies on shared libraries in ELF or PE files.
+Memory Layout Reconstruction,domain,Statically mapping sections to virtual addresses for layout understanding.
+Stack Frame Dissection,technique,Breaking down function prologs/epilogs to understand local variables statically.
+Heap Structure Inference,technique,Predicting heap allocations from malloc patterns in disassembled code.
+Global Variable Tracking,technique,Identifying and naming global data accesses in malware binaries.
+Constant Folding,technique,Statically evaluating constant expressions to simplify malware code.
+Expression Simplification,technique,Reducing complex instructions to equivalent simpler forms in analysis.
+Instruction Scheduling Analysis,technique,Examining possible reordering effects in out-of-order execution.
+Speculative Path Exploration,technique,Statically considering speculatively executed paths in modern CPUs.
+Cache Side-Channel Static,technique,Identifying code vulnerable to cache attacks through access patterns.
+Timing Attack Prevention,domain,Domain for code patterns that avoid variable-time operations statically.
+Power Analysis Resistance,technique,Analyzing code for constant-power operations against side-channels.
+Fault Injection Simulation,technique,Statically modeling effects of induced faults on malware execution.
+Hardware Trojan Detection,domain,Domain for finding malicious hardware mods via firmware analysis.
+Trusted Platform Module,domain,Static analysis of TPM interactions in secure boot malware.
+Secure Enclave Analysis,domain,Domain for isolated execution environments like Intel SGX in code.
+Rowhammer Mitigation,technique,Identifying code vulnerable to DRAM rowhammer attacks statically.
+Meltdown/Spectre Patterns,technique,Detecting speculative execution misuse patterns in binaries.
+Firmware Security Domain,domain,Broad domain for UEFI/BIOS analysis against bootkit malware.
+IoT Protocol Static,domain,Analyzing hardcoded IoT protocols like MQTT in device binaries.
+SCADA Malware Domain,domain,Static analysis of industrial control system protocol manipulations.
+Vehicle CAN Bus,domain,Domain for automotive malware targeting CAN messages statically.
+Drone Firmware Domain,domain,Analysis of flight controller binaries for hijacking code.
+Wearable Device Security,domain,Static domain for smartwatch or fitness tracker app analysis.
+Smart Home Hub,domain,Analyzing hub firmware for backdoors or weak auth code.
+Medical Device Firmware,domain,Domain for pacemaker or infusion pump binary inspection.
+POS Terminal Malware,domain,Static analysis of payment card skimming code in terminals.
+ATM Jackpotting,domain,Domain for code that forces ATMs to dispense cash illegally.
+Gaming Cheat Detection,domain,Static analysis of cheat engine hooks or memory mods.
+Esports Anti-Cheat,domain,Domain for kernel-level anti-cheat binary verification.
+Cryptocurrency Wallet,domain,Analyzing wallet apps for private key theft code statically.
+NFT Smart Contract,domain,Static domain for Solidity code audit against reentrancy bugs.
+DeFi Protocol Analysis,domain,Domain for decentralized finance contract vulnerability scanning.
+Metaverse Security,domain,Static analysis of virtual world client binaries for exploits.
+AR/VR Malware Domain,domain,Domain for augmented reality app code that overlays malicious UI.
+Autonomous System Domain,domain,Analyzing self-driving AI models for backdoor injections statically.
+Quantum-Resistant Crypto,domain,Domain for post-quantum algorithm analysis in binaries.
+Homomorphic Computation,domain,Static analysis of encrypted data processing code.
+Federated Model Analysis,domain,Domain for distributed ML models against poisoning attacks.
+Explainable AI Domain,domain,Static techniques to interpret ML-based malware detectors.
+Neuromorphic Computing,domain,Domain for spiking neural network hardware simulation statically.
+Edge Device Security,domain,Broad domain for on-device ML inference code analysis.
+5G Network Slice,domain,Static analysis of virtual network function binaries.
+Satellite Communication,domain,Domain for ground station software malware detection.
+Undersea Cable Security,domain,Analyzing monitoring software for cable infrastructure statically.
+Space System Malware,domain,Domain for satellite command code injection analysis.
+Critical Infrastructure Domain,domain,Broad domain for power grid SCADA static analysis.
+Election System Security,domain,Static domain for voting machine firmware verification.
+Supply Chain Attack Domain,domain,Analyzing dependencies for trojaned library code.
+Insider Threat Static,domain,Domain for detecting anomalous code commits or binaries.
+Physical Access Malware,domain,Static analysis of USB rubber ducky script equivalents.
+Environmental Sensor Hack,domain,Domain for IoT sensor firmware tampering code.
+Behavioral Biometrics Bypass,domain,Analyzing code that spoofs gait or keystroke patterns.
+Deepfake Generation Code,domain,Static domain for neural network models creating fakes.
+Voice Synthesis Malware,domain,Domain for code that clones voices for social engineering.
+Facial Recognition Evasion,domain,Static analysis of adversarial patch generation code.
+Predictive Maintenance Hack,domain,Domain for industrial ML models with backdoors.
+Smart Grid Malware,domain,Static analysis of energy management system protocols.
+Traffic Control System,domain,Domain for light controller firmware analysis.
+Water Treatment Plant,domain,Analyzing SCADA code for chemical dosing manipulation.
+Aviation System Domain,domain,Static domain for flight management software inspection.
+Maritime Navigation Malware,domain,Domain for GPS spoofing code in ship systems.
+Railway Signaling Security,domain,Analyzing train control system binaries statically.
+Telecom Infrastructure,domain,Broad domain for base station firmware analysis.
+Broadcast System Hack,domain,Static analysis of TV/radio transmission software.
+Emergency Alert Malware,domain,Domain for false alarm generation code in alert systems.
+Public WiFi Captive Portal,domain,Analyzing portal scripts for MITM code statically.
+Mesh Network Malware,domain,Domain for ad-hoc network routing protocol exploits.
+Satellite Phone Security,domain,Static analysis of handheld satellite device firmware.

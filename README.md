@@ -1,84 +1,116 @@
 # 📄 Paper No Yapper
 
-**Version:** v0.0.0
+**Version:** v1.0.0
 
-Paper No Yapper is a lightweight research paper domain/methodology/tool extractor.  
-Give it a paragraph (from your paper, abstract, or notes), and it will automatically detect relevant domains, techniques, and tools — even without a large language model.  
-It uses a semantic knowledge base + unsupervised text extraction for accurate results.
+Paper No Yapper is a comprehensive **research paper analysis system**.
+It automatically extracts **Domains, Methodologies, and Techniques** from research papers, using a combination of:
 
----
+* 🧠 **Ontology-based term matching** (`onto.csv`)
+* 🔍 **Exact, fuzzy, and synonym detection** (WordNet + FuzzyWuzzy)
+* 📊 **Automated statistics & visualizations**
 
-## ✨ Features (v0.0.0)
-- 📥 Reads research paper abstracts or paragraphs from a text file.
-- 🧠 Matches sentences against a custom **Knowledge Base** (`onto.csv`) of tools, domains, and techniques.
-- 🔍 Extracts additional terms **unsupervised** when they are not in the KB.
-- ⚡ Uses **Sentence Transformers** (`all-MiniLM-L6-v2`) for semantic matching.
-- 📊 Outputs top matches grouped by type (Tool / Domain / Technique).
-- 📄 Supports CSV, Excel, and PDF outputs for results.
+Outputs include: first papers, most cited papers, research impact analysis, citation timelines, and co-occurrence networks.
 
 ---
 
-## 📂 Input Options
-You can prepare your input in two ways:
+## ✨ Features (v1.0.0)
 
-1. **Export CSV from Scopus**  
-   - From your Scopus search results, export as CSV and use the abstracts/paragraphs from there.
+* 📥 Reads **Scopus CSV exports** (`scopus.csv`).
+* 🧠 Maps Scopus columns automatically (Title, Abstract, Authors, Keywords, etc.).
+* 🔍 Matches text against ontology terms (Domains / Methodologies / Techniques).
+* 📊 Generates multiple CSV reports:
 
-2. **Use my [Paper Grabber Tool](https://github.com/AniruthKarthik/paper-grabber)**  
-   - Bookmarklet to fetch papers, abstracts, and metadata for analysis.
+  * **paper\_analysis.csv** → Paper-level classification.
+  * **first\_papers\_analysis.csv** → Earliest paper per category.
+  * **most\_cited\_papers\_analysis.csv** → Highest impact papers.
+* 📈 Creates **visualizations**:
+
+  * Term distributions
+  * Citation impact analysis
+  * Temporal evolution & trends
+  * Co-occurrence networks
+  * Heatmaps & maturity index
+  * Category comparisons
+* 📝 Logs skipped/problematic rows into `skipped_rows.log`.
 
 ---
 
-## 🚀 Requirements
-Install dependencies:
+## 📂 Input Files
 
-```bash
-pip install pandas sentence-transformers openpyxl python-docx reportlab
-````
+1. **scopus.csv** → Exported from Scopus (with abstracts, titles, authors, year, citations, etc.).
+2. **onto.csv** → Ontology file with categories (Domain / Methodology / Technique).
 
-Optional (for PDF parsing):
+Format example:
 
-```bash
-pip install PyPDF2
+```csv
+term,category
+Deep Learning,Methodology
+Static Analysis,Technique
+Cybersecurity,Domain
 ```
 
 ---
 
-## 📦 Files
+## 🚀 Requirements
 
-* **para.txt** → Your paragraph or abstract to analyze.
-* **onto.csv** → Knowledge base in the format:
+Install dependencies:
 
-  ```
-  name,type,description
-  IDA Pro,tool,IDA Pro is a static analysis toolkit...
-  ```
-* **script2.py** → Main analysis script.
+```bash
+pip install pandas matplotlib seaborn networkx fuzzywuzzy nltk numpy
+```
+
+Optional: for WordNet synonyms (first run will download corpus):
+
+```python
+import nltk
+nltk.download('wordnet')
+```
 
 ---
 
 ## ▶ Usage
 
 ```bash
-python script2.py
+python claude2.py
 ```
 
-* Reads `para.txt`
-* Loads `onto.csv`
-* Outputs the top matching **Tools**, **Domains**, and **Techniques**.
+This will:
+
+* Load `scopus.csv` + `onto.csv`
+* Run analysis and classifications
+* Save results to the `output/` folder:
+
+```
+output/
+ ├─ paper_analysis.csv
+ ├─ first_papers_analysis.csv
+ ├─ most_cited_papers_analysis.csv
+ ├─ skipped_rows.log
+ └─ plots/
+      ├─ domain_distribution.png
+      ├─ methodology_distribution.png
+      ├─ technique_distribution.png
+      ├─ citation_impact_analysis.png
+      ├─ temporal_evolution.png
+      ├─ cooccurrence_networks.png
+      ├─ impact_heatmap.png
+      ├─ temporal_trends.png
+      └─ category_comparisons.png
+```
 
 ---
 
 ## 📜 Version History
 
-* **[v0.0.0](https://github.com/AniruthKarthik/paper-no-yapper/releases/tag/v0.0.0)** – Initial config with KB matching & unsupervised extraction.
+* [v0.0.0](https://github.com/AniruthKarthik/paper-no-yapper/releases/tag/v0.0.0) — Released before v1.0.0
+* **\[v1.0.0]** – Major release with Scopus CSV support, ontology-driven classification, fuzzy matching, synonym expansion, citation analysis, and visualization suite.
+* **\[v0.0.0]** – Initial config with KB matching & unsupervised extraction.
 
 ---
 
 ## 🔗 Related Repos
 
-* **[Paper Grabber](https://github.com/AniruthKarthik/project-sandbox/paper-grabber)** – Bookmarklet to save your favourite papers into an excel sheet.
+* **[Paper Grabber](https://github.com/AniruthKarthik/project-sandbox/tree/master/paper-grabber)** – Bookmarklet to save your favourite papers into an excel sheet.
 
 ---
-
 
