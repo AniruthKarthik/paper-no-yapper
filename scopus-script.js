@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Scopus Batch PDF Downloader - Fixed
+// @name         Scopus Batch PDF Downloader - With Range Control
 // @namespace    http://tampermonkey.net/
-// @version      1.3
-// @description  Automates batch PDF downloads from Scopus with correct button sequence and React-compatible input setting
+// @version      1.4
+// @description  Automates batch PDF downloads from Scopus with start/end range control
 // @author       Assistant
 // @match        https://www.scopus.com/*
 // @grant        none
@@ -11,15 +11,18 @@
 (function () {
   "use strict";
 
-  // Configuration
-  const BATCH_SIZE = 40;
-  const DELAY_BETWEEN_ACTIONS = 2000; // 2 seconds
+  // Configuration - MODIFY THESE VALUES
+  const START_PAPER = 1;        // Starting paper number (change this)
+  const END_PAPER = 3601;        // Ending paper number (change this)
+  const BATCH_SIZE = 50;        // Papers per batch
+
+  const DELAY_BETWEEN_ACTIONS = 1000; // 1 seconds
   const MAX_WAIT_TIME = 10000; // 10 seconds max wait for elements
   const ELEMENT_CHECK_INTERVAL = 500; // Check every 500ms
 
   // State management
   let isRunning = false;
-  let currentFrom = 1;
+  let currentFrom = START_PAPER;
   let totalResults = 0;
   let processedBatches = 0;
 
@@ -618,27 +621,26 @@
     }
 
     isRunning = true;
-    log("🚀 Starting batch download automation with fixed sequence...");
+    log("🚀 Starting batch download automation with range control...");
 
     try {
-      // Get total results
-      totalResults = getTotalResults();
-      if (totalResults === 0) {
-        await delay(2000);
-        totalResults = getTotalResults();
-        if (totalResults === 0) {
-          throw new Error("Could not determine total results count");
-        }
+      // Validate range settings
+      if (START_PAPER <= 0 || END_PAPER <= 0) {
+        throw new Error("START_PAPER and END_PAPER must be greater than 0");
+      }
+      if (START_PAPER > END_PAPER) {
+        throw new Error("START_PAPER must be less than or equal to END_PAPER");
       }
 
-      log(`📊 Total results: ${totalResults}`);
+      const totalToDownload = END_PAPER - START_PAPER + 1;
+      log(`📊 Range: Papers ${START_PAPER} to ${END_PAPER} (${totalToDownload} total)`);
       log(`📦 Batch size: ${BATCH_SIZE}`);
 
-      const totalBatches = Math.ceil(totalResults / BATCH_SIZE);
+      const totalBatches = Math.ceil(totalToDownload / BATCH_SIZE);
       log(`🎯 Total batches to process: ${totalBatches}`);
 
       // Reset state
-      currentFrom = 1;
+      currentFrom = START_PAPER;
       processedBatches = 0;
 
       // Process each batch
@@ -647,7 +649,7 @@
         batchNum <= totalBatches && isRunning;
         batchNum++
       ) {
-        const currentTo = Math.min(currentFrom + BATCH_SIZE - 1, totalResults);
+        const currentTo = Math.min(currentFrom + BATCH_SIZE - 1, END_PAPER);
 
         log(`\n📄 === BATCH ${batchNum}/${totalBatches} ===`);
         log(`📄 Processing papers ${currentFrom} to ${currentTo}`);
@@ -663,14 +665,15 @@
         currentFrom = currentTo + 1;
 
         // Progress reporting
-        const progress = Math.round((currentTo / totalResults) * 100);
+        const papersProcessed = currentTo - START_PAPER + 1;
+        const progress = Math.round((papersProcessed / totalToDownload) * 100);
         log(
-          `📈 Progress: ${progress}% (${currentTo}/${totalResults} papers processed)`,
+          `📈 Progress: ${progress}% (${papersProcessed}/${totalToDownload} papers processed)`,
           "success",
         );
 
         // Wait before next batch (allow time for file saves)
-        if (currentFrom <= totalResults && isRunning) {
+        if (currentFrom <= END_PAPER && isRunning) {
           const waitTime = DELAY_BETWEEN_ACTIONS * 4; // Extra time for manual saves
           log(`⏱️ Waiting ${waitTime / 1000} seconds before next batch...`);
           log(`💡 TIP: Save all PDFs from this batch during this wait time`);
@@ -682,7 +685,7 @@
         log(`\n🎉 AUTOMATION COMPLETE! 🎉`, "success");
         log(`📊 Successfully processed ${processedBatches} batches`, "success");
         log(
-          `📄 Total papers: ${Math.min(currentFrom - 1, totalResults)}`,
+          `📄 Papers range: ${START_PAPER} to ${Math.min(currentFrom - 1, END_PAPER)}`,
           "success",
         );
         log(`💾 Don't forget to save any remaining PDF dialogs!`, "warning");
@@ -720,11 +723,19 @@
             z-index: 10000;
             font-family: Arial, sans-serif;
             font-size: 14px;
-            min-width: 280px;
+            min-width: 300px;
         `;
 
+    const totalToDownload = END_PAPER - START_PAPER + 1;
+    const estimatedBatches = Math.ceil(totalToDownload / BATCH_SIZE);
+
     panel.innerHTML = `
-            <div style="font-weight: bold; margin-bottom: 10px;">📄 Scopus Batch Downloader - Fixed</div>
+            <div style="font-weight: bold; margin-bottom: 10px;">📄 Scopus Range Downloader</div>
+            <div style="font-size: 12px; margin-bottom: 10px; background: #34495e; padding: 8px; border-radius: 4px;">
+                <strong>Range:</strong> Papers ${START_PAPER} to ${END_PAPER}<br>
+                <strong>Total:</strong> ${totalToDownload} papers<br>
+                <strong>Batches:</strong> ${estimatedBatches} (${BATCH_SIZE} each)
+            </div>
             <div style="font-size: 12px; margin-bottom: 10px; background: #34495e; padding: 8px; border-radius: 4px;">
                 <strong>Sequence:</strong><br>
                 1️⃣ Click download once<br>
@@ -743,7 +754,7 @@
                 cursor: pointer;
                 width: 100%;
                 margin-bottom: 5px;
-            ">Start Batch Download</button>
+            ">Start Range Download</button>
             <button id="stopBtn" style="
                 background: #e74c3c;
                 color: white;
@@ -755,7 +766,8 @@
                 margin-bottom: 10px;
             " disabled>Stop</button>
             <div style="font-size: 11px; color: #bdc3c7;">
-                ⚠️ You'll need to manually save each PDF dialog that appears.
+                ⚠️ You'll need to manually save each PDF dialog that appears.<br>
+                💡 Edit START_PAPER and END_PAPER at the top of the script to change range.
             </div>
         `;
 
@@ -769,7 +781,7 @@
     startBtn.addEventListener("click", () => {
       startBtn.disabled = true;
       stopBtn.disabled = false;
-      statusDiv.textContent = "Running fixed sequence...";
+      statusDiv.textContent = `Running range ${START_PAPER}-${END_PAPER}...`;
       runBatchDownload().finally(() => {
         startBtn.disabled = false;
         stopBtn.disabled = true;
@@ -788,15 +800,14 @@
     // Update status periodically
     setInterval(() => {
       if (isRunning) {
-        const progress =
-          totalResults > 0
-            ? Math.round(((currentFrom - 1) / totalResults) * 100)
-            : 0;
+        const totalToDownload = END_PAPER - START_PAPER + 1;
+        const papersProcessed = Math.max(0, currentFrom - START_PAPER);
+        const progress = Math.round((papersProcessed / totalToDownload) * 100);
         statusDiv.textContent = `Running... ${progress}% (Batch ${processedBatches + 1})`;
       }
     }, 1000);
 
-    log("Control panel created with fixed sequence");
+    log("Control panel created with range control");
   }
 
   // Initialize script
@@ -808,14 +819,17 @@
 
     setTimeout(() => {
       createControlPanel();
-      log("🎮 Scopus Batch Downloader (Fixed) initialized");
-      log("📋 The script will now follow the exact sequence:");
+      log("🎮 Scopus Batch Downloader (Range Control) initialized");
+      log(`📊 Configured range: Papers ${START_PAPER} to ${END_PAPER}`);
+      log(`📦 Batch size: ${BATCH_SIZE} papers per batch`);
+      log("📋 The script will follow the exact sequence:");
       log("   1️⃣ Click download button once");
       log("   2️⃣ Click result radio button once");
       log("   3️⃣ Fill from and to numbers");
       log("   4️⃣ Press first download button twice");
       log("   5️⃣ Press second download button once");
-      log('🚀 Click "Start Batch Download" to begin');
+      log('🚀 Click "Start Range Download" to begin');
+      log('💡 To change the range, edit START_PAPER and END_PAPER variables at the top of the script');
     }, 2000);
   }
 
