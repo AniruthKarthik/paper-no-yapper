@@ -71,7 +71,7 @@ nltk.download('wordnet')
 ## ▶ Usage
 
 ```bash
-python claude2.py
+python script.py
 ```
 
 This will:
