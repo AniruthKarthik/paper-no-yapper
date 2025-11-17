@@ -1,4 +1,3 @@
-
 import csv
 import os
 import re
@@ -26,7 +25,7 @@ def main():
     required_file = 'required.csv'
     
     # Get all PDF files in the current directory
-    pdf_files = [f for f in os.listdir('.') if f.lower().endswith('.pdf')]
+    pdf_files = [f for f in os.listdir('papers') if f.lower().endswith('.pdf')]
 
     with open(scopus_file, 'r', encoding='utf-8') as infile, \
          open(required_file, 'w', newline='', encoding='utf-8') as outfile:
@@ -35,15 +34,17 @@ def main():
         writer = csv.writer(outfile)
         
         # Write header to required.csv
-        writer.writerow(['DOI', 'Title', 'Link'])
+        writer.writerow(['DOI', 'Title', 'Link','Year'])
         
         for row in reader:
             title = row.get('Title', '')
             doi = row.get('DOI', '')
             link = row.get('Link', '')
+            year = row.get('Year', '')
 
             if not pdf_exists(title, doi, pdf_files):
-                writer.writerow([doi, title, link])
+                writer.writerow([doi, title, link,year])
+                print(title)
 
 if __name__ == "__main__":
     main()
