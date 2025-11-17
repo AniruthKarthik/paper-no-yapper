@@ -1,0 +1,615 @@
+2025-11-18 00:12:15,623 [INFO] Created new result.csv with headers.
+2025-11-18 00:12:15,625 [INFO] Found 3712 total PDFs. 3712 are new.
+2025-11-18 00:12:15,625 [INFO] --- Processing: Android malware detection applying feature selection techniques and machine learning.pdf ---
+2025-11-18 00:12:16,841 [INFO]   ...Sending 34355 chars to Gemini API...
+2025-11-18 00:12:17,481 [ERROR]   ...An unexpected error occurred while processing Android malware detection applying feature selection techniques and machine learning.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:12:17,481 [INFO] --- Processing: The-Guardian-Node-Slow-DoS-Detection-Model-for-RealTime-Application-in-IoT-Networks_2024_Multidisciplinary-Digital-Publishing-Institute-MDPI.pdf ---
+2025-11-18 00:12:18,475 [INFO]   ...Sending 59487 chars to Gemini API...
+2025-11-18 00:12:18,716 [ERROR]   ...An unexpected error occurred while processing The-Guardian-Node-Slow-DoS-Detection-Model-for-RealTime-Application-in-IoT-Networks_2024_Multidisciplinary-Digital-Publishing-Institute-MDPI.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:12:18,717 [INFO] --- Processing: DETECTING-NETWORKUNFRIENDLY-MOBILES-with-the-RANDOM-NEURAL-NETWORK_2016_Cambridge-University-Press.pdf ---
+2025-11-18 00:12:21,443 [INFO]   ...Text truncated from 7023 to 7000 words.
+2025-11-18 00:12:21,443 [INFO]   ...Sending 57114 chars to Gemini API...
+2025-11-18 00:12:21,681 [ERROR]   ...An unexpected error occurred while processing DETECTING-NETWORKUNFRIENDLY-MOBILES-with-the-RANDOM-NEURAL-NETWORK_2016_Cambridge-University-Press.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:12:21,681 [INFO] --- Processing: applsci-14-01673.pdf ---
+2025-11-18 00:12:22,532 [INFO]   ...Sending 40707 chars to Gemini API...
+2025-11-18 00:12:22,754 [ERROR]   ...An unexpected error occurred while processing applsci-14-01673.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:12:22,755 [INFO] --- Processing: Learning-representations-for-log-data-in-cybersecurity_2017_Springer-Verlag-servicespringerde.pdf ---
+2025-11-18 00:12:24,657 [INFO]   ...Sending 48223 chars to Gemini API...
+2025-11-18 00:12:24,894 [ERROR]   ...An unexpected error occurred while processing Learning-representations-for-log-data-in-cybersecurity_2017_Springer-Verlag-servicespringerde.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:12:24,894 [INFO] --- Processing: Certifying Accuracy, Privacy, and Robustness of ML-Based Malware Detection.pdf ---
+2025-11-18 00:12:27,806 [INFO]   ...Text truncated from 12365 to 7000 words.
+2025-11-18 00:12:27,806 [INFO]   ...Sending 40970 chars to Gemini API...
+2025-11-18 00:12:28,029 [ERROR]   ...An unexpected error occurred while processing Certifying Accuracy, Privacy, and Robustness of ML-Based Malware Detection.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:12:28,029 [INFO] --- Processing: Feature-Selection-Using-Adaptive-Weight-Based-Grey-Wolf-Optimization-for-Malware-Detection-in-Android_2024_Intelligent-Network-and-Systems-Society.pdf ---
+2025-11-18 00:12:29,255 [INFO]   ...Text truncated from 7037 to 7000 words.
+2025-11-18 00:12:29,255 [INFO]   ...Sending 44774 chars to Gemini API...
+2025-11-18 00:12:29,492 [ERROR]   ...An unexpected error occurred while processing Feature-Selection-Using-Adaptive-Weight-Based-Grey-Wolf-Optimization-for-Malware-Detection-in-Android_2024_Intelligent-Network-and-Systems-Society.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:12:29,492 [INFO] --- Processing: A-New-Hybrid-Ensemble-LearningBased-Malware-Detection-Technique_2024_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf ---
+2025-11-18 00:12:30,039 [INFO]   ...Sending 31701 chars to Gemini API...
+2025-11-18 00:15:52,057 [INFO] Found 3712 total PDFs. 3712 are new.
+2025-11-18 00:15:52,057 [INFO] --- Processing: Android malware detection applying feature selection techniques and machine learning.pdf ---
+2025-11-18 00:15:53,275 [INFO]   ...Sending 34355 chars (full paper) to Gemini API...
+2025-11-18 00:15:53,634 [ERROR]   ...An unexpected error occurred while processing Android malware detection applying feature selection techniques and machine learning.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:15:53,634 [INFO]   ...Moving to next paper.
+2025-11-18 00:15:53,634 [INFO] --- Processing: The-Guardian-Node-Slow-DoS-Detection-Model-for-RealTime-Application-in-IoT-Networks_2024_Multidisciplinary-Digital-Publishing-Institute-MDPI.pdf ---
+2025-11-18 00:15:54,657 [INFO]   ...Sending 59487 chars (full paper) to Gemini API...
+2025-11-18 00:15:54,916 [ERROR]   ...An unexpected error occurred while processing The-Guardian-Node-Slow-DoS-Detection-Model-for-RealTime-Application-in-IoT-Networks_2024_Multidisciplinary-Digital-Publishing-Institute-MDPI.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:15:54,916 [INFO]   ...Moving to next paper.
+2025-11-18 00:15:54,916 [INFO] --- Processing: DETECTING-NETWORKUNFRIENDLY-MOBILES-with-the-RANDOM-NEURAL-NETWORK_2016_Cambridge-University-Press.pdf ---
+2025-11-18 00:15:57,658 [INFO]   ...Sending 57347 chars (full paper) to Gemini API...
+2025-11-18 00:15:57,898 [ERROR]   ...An unexpected error occurred while processing DETECTING-NETWORKUNFRIENDLY-MOBILES-with-the-RANDOM-NEURAL-NETWORK_2016_Cambridge-University-Press.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:15:57,898 [INFO]   ...Moving to next paper.
+2025-11-18 00:15:57,898 [INFO] --- Processing: applsci-14-01673.pdf ---
+2025-11-18 00:15:58,802 [INFO]   ...Sending 40707 chars (full paper) to Gemini API...
+2025-11-18 00:15:59,018 [ERROR]   ...An unexpected error occurred while processing applsci-14-01673.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:15:59,018 [INFO]   ...Moving to next paper.
+2025-11-18 00:15:59,018 [INFO] --- Processing: Learning-representations-for-log-data-in-cybersecurity_2017_Springer-Verlag-servicespringerde.pdf ---
+2025-11-18 00:16:01,021 [INFO]   ...Sending 48223 chars (full paper) to Gemini API...
+2025-11-18 00:16:01,258 [ERROR]   ...An unexpected error occurred while processing Learning-representations-for-log-data-in-cybersecurity_2017_Springer-Verlag-servicespringerde.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:01,258 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:01,258 [INFO] --- Processing: Certifying Accuracy, Privacy, and Robustness of ML-Based Malware Detection.pdf ---
+2025-11-18 00:16:04,304 [INFO]   ...Sending 72741 chars (full paper) to Gemini API...
+2025-11-18 00:16:04,564 [ERROR]   ...An unexpected error occurred while processing Certifying Accuracy, Privacy, and Robustness of ML-Based Malware Detection.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:04,564 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:04,564 [INFO] --- Processing: Feature-Selection-Using-Adaptive-Weight-Based-Grey-Wolf-Optimization-for-Malware-Detection-in-Android_2024_Intelligent-Network-and-Systems-Society.pdf ---
+2025-11-18 00:16:05,849 [INFO]   ...Sending 45060 chars (full paper) to Gemini API...
+2025-11-18 00:16:06,071 [ERROR]   ...An unexpected error occurred while processing Feature-Selection-Using-Adaptive-Weight-Based-Grey-Wolf-Optimization-for-Malware-Detection-in-Android_2024_Intelligent-Network-and-Systems-Society.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:06,071 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:06,071 [INFO] --- Processing: A-New-Hybrid-Ensemble-LearningBased-Malware-Detection-Technique_2024_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf ---
+2025-11-18 00:16:06,632 [INFO]   ...Sending 31701 chars (full paper) to Gemini API...
+2025-11-18 00:16:06,842 [ERROR]   ...An unexpected error occurred while processing A-New-Hybrid-Ensemble-LearningBased-Malware-Detection-Technique_2024_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:06,842 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:06,842 [INFO] --- Processing: Tetris-security-keypads-design-with-higher-security-using-alignment-and-padding_2018_Science-Publishing-Corporation-Inc-ijetsciencepubcocom.pdf ---
+2025-11-18 00:16:07,292 [INFO]   ...Sending 17293 chars (full paper) to Gemini API...
+2025-11-18 00:16:07,457 [ERROR]   ...An unexpected error occurred while processing Tetris-security-keypads-design-with-higher-security-using-alignment-and-padding_2018_Science-Publishing-Corporation-Inc-ijetsciencepubcocom.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:07,457 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:07,457 [INFO] --- Processing: 978-3-031-53552-9_1.pdf ---
+2025-11-18 00:16:07,790 [INFO]   ...Sending 18306 chars (full paper) to Gemini API...
+2025-11-18 00:16:07,954 [ERROR]   ...An unexpected error occurred while processing 978-3-031-53552-9_1.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:07,955 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:07,955 [INFO] --- Processing: Malicious code defense system based on cloud computing.pdf ---
+2025-11-18 00:16:09,950 [INFO]   ...Sending 96605 chars (full paper) to Gemini API...
+2025-11-18 00:16:10,235 [ERROR]   ...An unexpected error occurred while processing Malicious code defense system based on cloud computing.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:10,236 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:10,236 [INFO] --- Processing: A Fast Malicious Code Detection Method Based on Feature Fusion.pdf ---
+2025-11-18 00:16:10,686 [INFO]   ...Sending 13177 chars (full paper) to Gemini API...
+2025-11-18 00:16:10,844 [ERROR]   ...An unexpected error occurred while processing A Fast Malicious Code Detection Method Based on Feature Fusion.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:10,844 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:10,844 [INFO] --- Processing: Machine-Learning-based-Optimization-Scheme-for-Detection-of-Spam-and-Malware-Propagation-in-Twitter_2021_Science-and-Information-Organization.pdf ---
+2025-11-18 00:16:11,097 [WARNING] Cannot set gray non-stroke color because /'P48' is an invalid float value
+2025-11-18 00:16:11,097 [WARNING] Cannot set gray non-stroke color because /'P57' is an invalid float value
+2025-11-18 00:16:11,098 [WARNING] Cannot set gray non-stroke color because /'P66' is an invalid float value
+2025-11-18 00:16:11,098 [WARNING] Cannot set gray non-stroke color because /'P75' is an invalid float value
+2025-11-18 00:16:11,099 [WARNING] Cannot set gray non-stroke color because /'P84' is an invalid float value
+2025-11-18 00:16:11,100 [WARNING] Cannot set gray non-stroke color because /'P93' is an invalid float value
+2025-11-18 00:16:11,100 [WARNING] Cannot set gray non-stroke color because /'P102' is an invalid float value
+2025-11-18 00:16:11,101 [WARNING] Cannot set gray non-stroke color because /'P111' is an invalid float value
+2025-11-18 00:16:11,102 [WARNING] Cannot set gray non-stroke color because /'P120' is an invalid float value
+2025-11-18 00:16:11,103 [WARNING] Cannot set gray non-stroke color because /'P129' is an invalid float value
+2025-11-18 00:16:11,103 [WARNING] Cannot set gray non-stroke color because /'P138' is an invalid float value
+2025-11-18 00:16:11,104 [WARNING] Cannot set gray non-stroke color because /'P147' is an invalid float value
+2025-11-18 00:16:11,104 [WARNING] Cannot set gray non-stroke color because /'P156' is an invalid float value
+2025-11-18 00:16:11,105 [WARNING] Cannot set gray non-stroke color because /'P165' is an invalid float value
+2025-11-18 00:16:11,105 [WARNING] Cannot set gray non-stroke color because /'P174' is an invalid float value
+2025-11-18 00:16:11,106 [WARNING] Cannot set gray non-stroke color because /'P183' is an invalid float value
+2025-11-18 00:16:11,106 [WARNING] Cannot set gray non-stroke color because /'P192' is an invalid float value
+2025-11-18 00:16:11,107 [WARNING] Cannot set gray non-stroke color because /'P201' is an invalid float value
+2025-11-18 00:16:11,108 [WARNING] Cannot set gray non-stroke color because /'P210' is an invalid float value
+2025-11-18 00:16:11,108 [WARNING] Cannot set gray non-stroke color because /'P219' is an invalid float value
+2025-11-18 00:16:11,110 [WARNING] Cannot set gray non-stroke color because /'P228' is an invalid float value
+2025-11-18 00:16:11,562 [WARNING] Cannot set gray non-stroke color because /'P311' is an invalid float value
+2025-11-18 00:16:11,563 [WARNING] Cannot set gray non-stroke color because /'P318' is an invalid float value
+2025-11-18 00:16:12,015 [INFO]   ...Sending 43136 chars (full paper) to Gemini API...
+2025-11-18 00:16:12,231 [ERROR]   ...An unexpected error occurred while processing Machine-Learning-based-Optimization-Scheme-for-Detection-of-Spam-and-Malware-Propagation-in-Twitter_2021_Science-and-Information-Organization.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:12,231 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:12,232 [INFO] --- Processing: IPAnalyzer A novel Android malware detection system using ranked Intents and Permissions.pdf ---
+2025-11-18 00:16:14,063 [INFO]   ...Sending 116453 chars (full paper) to Gemini API...
+2025-11-18 00:16:14,365 [ERROR]   ...An unexpected error occurred while processing IPAnalyzer A novel Android malware detection system using ranked Intents and Permissions.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:14,365 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:14,365 [INFO] --- Processing: Visual-Discovery-of-Malware-Patterns-inAndroid-Apps_2022_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf ---
+2025-11-18 00:16:15,151 [INFO]   ...Sending 43030 chars (full paper) to Gemini API...
+2025-11-18 00:16:15,368 [ERROR]   ...An unexpected error occurred while processing Visual-Discovery-of-Malware-Patterns-inAndroid-Apps_2022_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-18 00:16:15,368 [INFO]   ...Moving to next paper.
+2025-11-18 00:16:15,368 [INFO] --- Processing: s10836-020-05857-6.pdf ---
+2025-11-18 00:18:37,686 [INFO] Found 3712 total PDFs. 3712 are new.
+2025-11-18 00:18:37,686 [INFO] --- Processing: Android malware detection applying feature selection techniques and machine learning.pdf ---
+2025-11-18 00:18:38,913 [INFO]   ...Sending 34355 chars (full paper) to Gemini API...
+2025-11-18 00:19:13,254 [INFO]   ...Successfully processed and saved Android malware detection applying feature selection techniques and machine learning.pdf.
+2025-11-18 00:19:13,254 [INFO] --- Processing: The-Guardian-Node-Slow-DoS-Detection-Model-for-RealTime-Application-in-IoT-Networks_2024_Multidisciplinary-Digital-Publishing-Institute-MDPI.pdf ---
+2025-11-18 00:19:14,229 [INFO]   ...Sending 59487 chars (full paper) to Gemini API...
+2025-11-18 00:19:14,479 [ERROR]   ...An unexpected error occurred while processing The-Guardian-Node-Slow-DoS-Detection-Model-for-RealTime-Application-in-IoT-Networks_2024_Multidisciplinary-Digital-Publishing-Institute-MDPI.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 45.568800926s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 45
+}
+]
+2025-11-18 00:19:14,479 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:14,479 [INFO] --- Processing: DETECTING-NETWORKUNFRIENDLY-MOBILES-with-the-RANDOM-NEURAL-NETWORK_2016_Cambridge-University-Press.pdf ---
+2025-11-18 00:19:17,185 [INFO]   ...Sending 57347 chars (full paper) to Gemini API...
+2025-11-18 00:19:17,418 [ERROR]   ...An unexpected error occurred while processing DETECTING-NETWORKUNFRIENDLY-MOBILES-with-the-RANDOM-NEURAL-NETWORK_2016_Cambridge-University-Press.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 42.628435288s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 42
+}
+]
+2025-11-18 00:19:17,418 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:17,418 [INFO] --- Processing: applsci-14-01673.pdf ---
+2025-11-18 00:19:18,288 [INFO]   ...Sending 40707 chars (full paper) to Gemini API...
+2025-11-18 00:19:19,201 [ERROR]   ...An unexpected error occurred while processing applsci-14-01673.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 40.847970656s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 40
+}
+]
+2025-11-18 00:19:19,201 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:19,202 [INFO] --- Processing: Learning-representations-for-log-data-in-cybersecurity_2017_Springer-Verlag-servicespringerde.pdf ---
+2025-11-18 00:19:21,153 [INFO]   ...Sending 48223 chars (full paper) to Gemini API...
+2025-11-18 00:19:21,441 [ERROR]   ...An unexpected error occurred while processing Learning-representations-for-log-data-in-cybersecurity_2017_Springer-Verlag-servicespringerde.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 38.607873604s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 38
+}
+]
+2025-11-18 00:19:21,442 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:21,442 [INFO] --- Processing: Certifying Accuracy, Privacy, and Robustness of ML-Based Malware Detection.pdf ---
+2025-11-18 00:19:24,395 [INFO]   ...Sending 72741 chars (full paper) to Gemini API...
+2025-11-18 00:19:24,723 [ERROR]   ...An unexpected error occurred while processing Certifying Accuracy, Privacy, and Robustness of ML-Based Malware Detection.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 35.326853729s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 35
+}
+]
+2025-11-18 00:19:24,723 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:24,723 [INFO] --- Processing: Feature-Selection-Using-Adaptive-Weight-Based-Grey-Wolf-Optimization-for-Malware-Detection-in-Android_2024_Intelligent-Network-and-Systems-Society.pdf ---
+2025-11-18 00:19:25,966 [INFO]   ...Sending 45060 chars (full paper) to Gemini API...
+2025-11-18 00:19:27,001 [ERROR]   ...An unexpected error occurred while processing Feature-Selection-Using-Adaptive-Weight-Based-Grey-Wolf-Optimization-for-Malware-Detection-in-Android_2024_Intelligent-Network-and-Systems-Society.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 33.848057733s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 33
+}
+]
+2025-11-18 00:19:27,001 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:27,001 [INFO] --- Processing: A-New-Hybrid-Ensemble-LearningBased-Malware-Detection-Technique_2024_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf ---
+2025-11-18 00:19:27,538 [INFO]   ...Sending 31701 chars (full paper) to Gemini API...
+2025-11-18 00:19:27,759 [ERROR]   ...An unexpected error occurred while processing A-New-Hybrid-Ensemble-LearningBased-Malware-Detection-Technique_2024_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 32.288930112s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 32
+}
+]
+2025-11-18 00:19:27,760 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:27,760 [INFO] --- Processing: Tetris-security-keypads-design-with-higher-security-using-alignment-and-padding_2018_Science-Publishing-Corporation-Inc-ijetsciencepubcocom.pdf ---
+2025-11-18 00:19:28,205 [INFO]   ...Sending 17293 chars (full paper) to Gemini API...
+2025-11-18 00:19:28,960 [ERROR]   ...An unexpected error occurred while processing Tetris-security-keypads-design-with-higher-security-using-alignment-and-padding_2018_Science-Publishing-Corporation-Inc-ijetsciencepubcocom.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 31.087927454s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 31
+}
+]
+2025-11-18 00:19:28,960 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:28,960 [INFO] --- Processing: 978-3-031-53552-9_1.pdf ---
+2025-11-18 00:19:29,278 [INFO]   ...Sending 18306 chars (full paper) to Gemini API...
+2025-11-18 00:19:29,441 [ERROR]   ...An unexpected error occurred while processing 978-3-031-53552-9_1.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 30.609888115s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 30
+}
+]
+2025-11-18 00:19:29,441 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:29,441 [INFO] --- Processing: Malicious code defense system based on cloud computing.pdf ---
+2025-11-18 00:19:31,353 [INFO]   ...Sending 96605 chars (full paper) to Gemini API...
+2025-11-18 00:19:31,660 [ERROR]   ...An unexpected error occurred while processing Malicious code defense system based on cloud computing.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 28.388960182s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 28
+}
+]
+2025-11-18 00:19:31,660 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:31,661 [INFO] --- Processing: A Fast Malicious Code Detection Method Based on Feature Fusion.pdf ---
+2025-11-18 00:19:32,089 [INFO]   ...Sending 13177 chars (full paper) to Gemini API...
+2025-11-18 00:19:33,939 [ERROR]   ...An unexpected error occurred while processing A Fast Malicious Code Detection Method Based on Feature Fusion.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 26.108695407s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 26
+}
+]
+2025-11-18 00:19:33,939 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:33,940 [INFO] --- Processing: Machine-Learning-based-Optimization-Scheme-for-Detection-of-Spam-and-Malware-Propagation-in-Twitter_2021_Science-and-Information-Organization.pdf ---
+2025-11-18 00:19:34,190 [WARNING] Cannot set gray non-stroke color because /'P48' is an invalid float value
+2025-11-18 00:19:34,191 [WARNING] Cannot set gray non-stroke color because /'P57' is an invalid float value
+2025-11-18 00:19:34,191 [WARNING] Cannot set gray non-stroke color because /'P66' is an invalid float value
+2025-11-18 00:19:34,192 [WARNING] Cannot set gray non-stroke color because /'P75' is an invalid float value
+2025-11-18 00:19:34,193 [WARNING] Cannot set gray non-stroke color because /'P84' is an invalid float value
+2025-11-18 00:19:34,193 [WARNING] Cannot set gray non-stroke color because /'P93' is an invalid float value
+2025-11-18 00:19:34,195 [WARNING] Cannot set gray non-stroke color because /'P102' is an invalid float value
+2025-11-18 00:19:34,196 [WARNING] Cannot set gray non-stroke color because /'P111' is an invalid float value
+2025-11-18 00:19:34,196 [WARNING] Cannot set gray non-stroke color because /'P120' is an invalid float value
+2025-11-18 00:19:34,197 [WARNING] Cannot set gray non-stroke color because /'P129' is an invalid float value
+2025-11-18 00:19:34,198 [WARNING] Cannot set gray non-stroke color because /'P138' is an invalid float value
+2025-11-18 00:19:34,198 [WARNING] Cannot set gray non-stroke color because /'P147' is an invalid float value
+2025-11-18 00:19:34,199 [WARNING] Cannot set gray non-stroke color because /'P156' is an invalid float value
+2025-11-18 00:19:34,199 [WARNING] Cannot set gray non-stroke color because /'P165' is an invalid float value
+2025-11-18 00:19:34,200 [WARNING] Cannot set gray non-stroke color because /'P174' is an invalid float value
+2025-11-18 00:19:34,200 [WARNING] Cannot set gray non-stroke color because /'P183' is an invalid float value
+2025-11-18 00:19:34,201 [WARNING] Cannot set gray non-stroke color because /'P192' is an invalid float value
+2025-11-18 00:19:34,201 [WARNING] Cannot set gray non-stroke color because /'P201' is an invalid float value
+2025-11-18 00:19:34,202 [WARNING] Cannot set gray non-stroke color because /'P210' is an invalid float value
+2025-11-18 00:19:34,203 [WARNING] Cannot set gray non-stroke color because /'P219' is an invalid float value
+2025-11-18 00:19:34,204 [WARNING] Cannot set gray non-stroke color because /'P228' is an invalid float value
+2025-11-18 00:19:34,665 [WARNING] Cannot set gray non-stroke color because /'P311' is an invalid float value
+2025-11-18 00:19:34,665 [WARNING] Cannot set gray non-stroke color because /'P318' is an invalid float value
+2025-11-18 00:19:35,115 [INFO]   ...Sending 43136 chars (full paper) to Gemini API...
+2025-11-18 00:19:35,361 [ERROR]   ...An unexpected error occurred while processing Machine-Learning-based-Optimization-Scheme-for-Detection-of-Spam-and-Malware-Propagation-in-Twitter_2021_Science-and-Information-Organization.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 24.687720024s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 24
+}
+]
+2025-11-18 00:19:35,361 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:35,361 [INFO] --- Processing: IPAnalyzer A novel Android malware detection system using ranked Intents and Permissions.pdf ---
+2025-11-18 00:19:37,167 [INFO]   ...Sending 116453 chars (full paper) to Gemini API...
+2025-11-18 00:19:37,495 [ERROR]   ...An unexpected error occurred while processing IPAnalyzer A novel Android malware detection system using ranked Intents and Permissions.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 22.554530863s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 22
+}
+]
+2025-11-18 00:19:37,496 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:37,496 [INFO] --- Processing: Visual-Discovery-of-Malware-Patterns-inAndroid-Apps_2022_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf ---
+2025-11-18 00:19:38,269 [INFO]   ...Sending 43030 chars (full paper) to Gemini API...
+2025-11-18 00:19:38,495 [ERROR]   ...An unexpected error occurred while processing Visual-Discovery-of-Malware-Patterns-inAndroid-Apps_2022_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 21.55693007s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 21
+}
+]
+2025-11-18 00:19:38,496 [INFO]   ...Moving to next paper.
+2025-11-18 00:19:38,496 [INFO] --- Processing: s10836-020-05857-6.pdf ---
+2025-11-18 00:19:41,536 [INFO]   ...Sending 39110 chars (full paper) to Gemini API...
+2025-11-18 00:20:05,340 [INFO]   ...Successfully processed and saved s10836-020-05857-6.pdf.
+2025-11-18 00:20:05,340 [INFO] --- Processing: Online Social Network Security A Comparative Review Using Machine Learning and Deep Learning.pdf ---
+2025-11-18 00:20:05,346 [ERROR] Could not extract text from papers/Online Social Network Security A Comparative Review Using Machine Learning and Deep Learning.pdf: No /Root object! - Is this really a PDF?
+2025-11-18 00:20:05,346 [WARNING] Skipping Online Social Network Security A Comparative Review Using Machine Learning and Deep Learning.pdf: No text could be extracted.
+2025-11-18 00:20:05,346 [INFO] --- Processing: IoT networks attacks detection using multi-novel features and extra tree random - voting ensemble classifier (ER-VEC).pdf ---
+2025-11-18 00:20:06,910 [INFO]   ...Sending 60389 chars (full paper) to Gemini API...
+2025-11-18 00:20:13,595 [ERROR]   ...An unexpected error occurred while processing IoT networks attacks detection using multi-novel features and extra tree random - voting ensemble classifier (ER-VEC).pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 46.459813725s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 46
+}
+]
+2025-11-18 00:20:13,596 [INFO]   ...Moving to next paper.
+2025-11-18 00:20:13,596 [INFO] --- Processing: 978-981-99-8111-3_30.pdf ---
+2025-11-18 00:20:14,043 [INFO]   ...Sending 22740 chars (full paper) to Gemini API...
+2025-11-18 00:20:14,242 [ERROR]   ...An unexpected error occurred while processing 978-981-99-8111-3_30.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 45.812097299s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 45
+}
+]
+2025-11-18 00:20:14,242 [INFO]   ...Moving to next paper.
+2025-11-18 00:20:14,242 [INFO] --- Processing: technologies-13-00045.pdf ---
+2025-11-18 00:20:15,311 [INFO]   ...Sending 56741 chars (full paper) to Gemini API...
+2025-11-18 00:20:15,553 [ERROR]   ...An unexpected error occurred while processing technologies-13-00045.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 44.501928734s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 44
+}
+]
+2025-11-18 00:20:15,553 [INFO]   ...Moving to next paper.
+2025-11-18 00:20:15,553 [INFO] --- Processing: Ransomware-Attack-Detection-by-Applying-Machine-Learning-Techniques_2023_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf ---
+2025-11-18 00:20:16,098 [INFO]   ...Sending 27221 chars (full paper) to Gemini API...
+2025-11-18 00:20:16,300 [ERROR]   ...An unexpected error occurred while processing Ransomware-Attack-Detection-by-Applying-Machine-Learning-Techniques_2023_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2, model: gemini-2.5-pro
+Please retry in 43.755367238s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 43
+}
+]
+2025-11-18 00:20:16,300 [INFO]   ...Moving to next paper.
+2025-11-18 00:20:16,300 [INFO] --- Processing: Malware-detection-through-machine-learning-techniques_2019_World-Academy-of-Research-in-Science-and-Engineering.pdf ---
