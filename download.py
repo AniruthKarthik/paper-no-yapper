@@ -72,10 +72,10 @@ def download_paper(url, title, directory):
     
     return False
 
-def get_unpaywall_url(doi):
+def get_unpaywall_url(doi, email_id):
     """Get PDF URL from Unpaywall API."""
     try:
-        url = f"https://api.unpaywall.org/v2/{doi}?email=researcher@example.com"
+        url = f"https://api.unpaywall.org/v2/{doi}?email={email_id}"
         response = session.get(url, timeout=10)
         
         if response.status_code == 200:
@@ -106,6 +106,98 @@ def get_arxiv_url(doi):
             # Remove version if present
             arxiv_id = re.sub(r'v\d+$', '', arxiv_id)
             return f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+    except:
+        pass
+    return None
+
+def get_semantic_scholar_url(doi):
+    """Get PDF URL from Semantic Scholar API."""
+    try:
+        url = f"https://api.semanticscholar.org/graph/v1/paper/{doi}?fields=openAccessPdf"
+        response = session.get(url, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            if data.get('openAccessPdf') and data['openAccessPdf'].get('url'):
+                return data['openAccessPdf']['url']
+    except:
+        pass
+    return None
+
+def get_openalex_url(doi):
+    """Get PDF URL from OpenAlex API."""
+    try:
+        url = f"https://api.openalex.org/works/https://doi.org/{doi}"
+        response = session.get(url, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            if data.get('open_access') and data['open_access'].get('oa_url'):
+                return data['open_access']['oa_url']
+    except:
+        pass
+    return None
+
+def get_loc_url(doi):
+    """Get PDF URL from Library of Congress API."""
+    try:
+        url = f"https://chroniclingamerica.loc.gov/search/pages/results/?proxtext={doi}&format=json"
+        response = session.get(url, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            if data.get('items') and len(data['items']) > 0 and data['items'][0].get('pdf'):
+                return data['items'][0]['pdf']
+    except:
+        pass
+    return None
+
+def get_base_url(doi):
+    """Get PDF URL from BASE API."""
+    try:
+        url = f"https://api.base-search.net/cgi-bin/BaseHttpSearch?func=PerformSearch&query=doi:{doi}&format=json"
+        response = session.get(url, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            if data.get('response') and data['response'].get('docs') and len(data['response']['docs']) > 0 and data['response']['docs'][0].get('pdf_url'):
+                return data['response']['docs'][0]['pdf_url']
+    except:
+        pass
+    return None
+
+def get_core_url(doi):
+    """Get PDF URL from CORE API."""
+    try:
+        url = f"https://api.core.ac.uk/v3/search/works?q=doi:{doi}"
+        response = session.get(url, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            if data.get('results') and len(data['results']) > 0 and data['results'][0].get('downloadUrl'):
+                return data['results'][0]['downloadUrl']
+    except:
+        pass
+    return None
+
+def get_doaj_url(doi):
+    """Get PDF URL from DOAJ API."""
+    try:
+        url = f"https://doaj.org/api/v1/search/articles/doi:{doi}"
+        response = session.get(url, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            if data.get('results') and len(data['results']) > 0 and data['results'][0]['bibjson'].get('link'):
+                for link in data['results'][0]['bibjson']['link']:
+                    if link.get('type') == 'fulltext':
+                        return link.get('url')
     except:
         pass
     return None
@@ -193,8 +285,14 @@ def save_progress(progress_file, index, downloaded_count, total_count):
 
 def main():
     """Main function to download papers."""
-    required_file = 'required.csv'
-    download_dir = 'pypapers'
+    required_file = 'allreq.csv'
+    download_dir = 'reqs'
+
+    # Generate 150 placeholder Gmail IDs
+    gmail_ids = [f"gemini_researcher_{i:03d}@gmail.com" for i in range(1, 151)]
+    current_email_index = 0
+    papers_since_last_switch = 0
+    PAPERS_PER_EMAIL = 70
 
     # Create download directory
     if not os.path.exists(download_dir):
@@ -242,13 +340,16 @@ def main():
                 # Try download methods in order
                 download_successful = False
                 
+                # Get current email for Unpaywall
+                current_email = gmail_ids[current_email_index]
+
                 # Method 1: Unpaywall (fastest for open access)
                 if not download_successful:
-                    pdf_url = get_unpaywall_url(doi)
+                    pdf_url = get_unpaywall_url(doi, current_email)
                     if pdf_url:
                         download_successful = download_paper(pdf_url, title, download_dir)
                         if download_successful:
-                            print(f"  → Success via Unpaywall")
+                            print(f"  → Success via Unpaywall (Email: {current_email})")
                         time.sleep(0.5)
                 
                 # Method 2: ArXiv (fast for preprints)
@@ -260,7 +361,61 @@ def main():
                             print(f"  → Success via ArXiv")
                         time.sleep(0.3)
                 
-                # Method 3: Publisher website
+                # Method 3: Semantic Scholar
+                if not download_successful:
+                    pdf_url = get_semantic_scholar_url(doi)
+                    if pdf_url:
+                        download_successful = download_paper(pdf_url, title, download_dir)
+                        if download_successful:
+                            print(f"  → Success via Semantic Scholar")
+                        time.sleep(0.5)
+
+                # Method 4: OpenAlex
+                if not download_successful:
+                    pdf_url = get_openalex_url(doi)
+                    if pdf_url:
+                        download_successful = download_paper(pdf_url, title, download_dir)
+                        if download_successful:
+                            print(f"  → Success via OpenAlex")
+                        time.sleep(0.5)
+
+                # Method 5: Library of Congress
+                if not download_successful:
+                    pdf_url = get_loc_url(doi)
+                    if pdf_url:
+                        download_successful = download_paper(pdf_url, title, download_dir)
+                        if download_successful:
+                            print(f"  → Success via Library of Congress")
+                        time.sleep(0.5)
+
+                # Method 6: BASE
+                if not download_successful:
+                    pdf_url = get_base_url(doi)
+                    if pdf_url:
+                        download_successful = download_paper(pdf_url, title, download_dir)
+                        if download_successful:
+                            print(f"  → Success via BASE")
+                        time.sleep(0.5)
+
+                # Method 7: CORE
+                if not download_successful:
+                    pdf_url = get_core_url(doi)
+                    if pdf_url:
+                        download_successful = download_paper(pdf_url, title, download_dir)
+                        if download_successful:
+                            print(f"  → Success via CORE")
+                        time.sleep(0.5)
+
+                # Method 8: DOAJ
+                if not download_successful:
+                    pdf_url = get_doaj_url(doi)
+                    if pdf_url:
+                        download_successful = download_paper(pdf_url, title, download_dir)
+                        if download_successful:
+                            print(f"  → Success via DOAJ")
+                        time.sleep(0.5)
+
+                # Method 9: Publisher website
                 if not download_successful:
                     pdf_url = get_publisher_url(doi)
                     if pdf_url:
@@ -269,7 +424,7 @@ def main():
                             print(f"  → Success via Publisher")
                         time.sleep(1.0)
                 
-                # Method 4: Sci-Hub (last resort)
+                # Method 10: Sci-Hub (last resort)
                 if not download_successful:
                     pdf_url = get_scihub_url(doi)
                     if pdf_url:
@@ -288,6 +443,13 @@ def main():
                         'Title': title,
                         'DOI': doi
                     })
+                
+                # Update email rotation
+                papers_since_last_switch += 1
+                if papers_since_last_switch >= PAPERS_PER_EMAIL:
+                    current_email_index = (current_email_index + 1) % len(gmail_ids)
+                    papers_since_last_switch = 0
+                    print(f"\n--- Switched to email: {gmail_ids[current_email_index]} ---")
                 
                 # Save progress every paper
                 save_progress(progress_file, current_index + 1, downloaded_count, total_count)
