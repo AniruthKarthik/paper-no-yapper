@@ -14,7 +14,7 @@ Outputs include: first papers, most cited papers, research impact analysis, cita
 
 ---
 
-## ✨ Features (v1.0.0)
+## Features (v1.0.0)
 
 *  Reads **Scopus CSV exports** (`scopus.csv`).
 *  Maps Scopus columns automatically (Title, Abstract, Authors, Keywords, etc.).
